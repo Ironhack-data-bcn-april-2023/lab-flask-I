@@ -7,5 +7,5 @@ def get_everything():
     engine = conn.connection_to_sql()
     df = pd.read_sql_query(query, engine)
     data = df.to_dict(orient="records")
-    return  jsonify(data)
+    return  data
     
