@@ -19,7 +19,7 @@ def random_int ():
     x = random.randint(0, 10)
     return f"{x}"
 
-@app.route("everything-employees")
+@app.route("/everything-employees")
 def example():
     return queries.get_everything()
 
