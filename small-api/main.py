@@ -23,6 +23,9 @@ def random_int ():
 def example():
     return queries.get_everything()
 
+@app.route("table/<tablename>")
+def ultima(tablename):
+    return queries.table_ten(tablename)
 
 if __name__ == "__main__":
      app.run(port=9000, debug=False)
