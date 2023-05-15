@@ -23,7 +23,7 @@ def random_int ():
 def example():
     return queries.get_everything()
 
-@app.route("table/<tablename>")
+@app.route("/table/<tablename>")
 def ultima(tablename):
     return queries.table_ten(tablename)
 
