@@ -19,10 +19,9 @@ def random_int ():
     x = random.randint(0, 10)
     return f"{x}"
 
-@app.route("/everything-employees")
+@app.route("everything-employees")
 def example():
-    queries.get_everything()
-    return
+    return queries.get_everything()
 
 if __name__ == "__main__":
      app.run(port=9000, debug=False)
