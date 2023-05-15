@@ -21,7 +21,6 @@ def random_int ():
     return f"{x}"
 
 @app.route("/everything-employees")
-
 def example():
     data = queries.get_everything()
     return json.dumps(data)
