@@ -4,6 +4,7 @@ import random
 import config.sql_connection as conn
 import tools.sql_queries as queries
 import pandas as pd
+import json
 
 
 app = Flask(__name__)
@@ -20,9 +21,11 @@ def random_int ():
     return f"{x}"
 
 @app.route("/everything-employees")
+
 def example():
     data = queries.get_everything()
-    return jsonify(data)
+    return json.dumps(data)
+
 
 if __name__ == "__main__":
      app.run(port=9000, debug=False)
