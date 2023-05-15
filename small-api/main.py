@@ -21,7 +21,8 @@ def random_int ():
 
 @app.route("/everything-employees")
 def example():
-    return queries.get_everything()
+    data = queries.get_everything()
+    return jsonify(data)
 
 if __name__ == "__main__":
      app.run(port=9000, debug=False)
